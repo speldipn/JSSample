@@ -1,0 +1,28 @@
+#body {
+  background-color: cadetblue;
+}
+
+.calc-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.calc-item {
+  height: 100px;
+  font-size: 40px;
+}
+
+.calc-item:nth-child(13) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#result {
+  background-color: white;
+  color: black;
+  text-align: end;
+  padding: 20px;
+  font-size: 50px;
+}
