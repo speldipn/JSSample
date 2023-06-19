@@ -9,7 +9,7 @@ const fetchSuccess = (loc) => {
   fetch(url).then((res) => res.json()).then(res => {
     const { name, weather, main } = res;
     citySpan.innerText = name;
-    weatherSpan.innerText = `${weather[0].main} 🌡${main.temp}`;
+    weatherSpan.innerText = `: ${weather[0].main} 🌡${main.temp}`;
   });
 }
 
