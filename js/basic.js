@@ -85,8 +85,7 @@ const toBuy = ["poptat", "tomato", "pizza"]; print(toBuy);
 toBuy[2] = "water"; print(toBuy);
 
 // Fucntion returns
-function calcAge(age) { return age + 2; }
-print(calcAge(96));
+function calcAge(age) { return age + 2; } print(calcAge(96));
 
 print(2 ** 3); // squre, equal to 2^3
 print("2" ** 3); // is possible ? multiple string value
@@ -103,12 +102,62 @@ const h1 = document.querySelector(".hello h1:first-child");
 // update text
 h1.innerHTML = "Click me";
 // add events
-h1.addEventListener("click", () => { h1.style.color = "#fff000"; });
-h1.addEventListener("mouseenter", () => { h1.innerText = "Mouse here!"; });
-h1.addEventListener("mouseleave", () => { h1.innerText = "Mouse leave."; });
+// h1.addEventListener("click", () => { h1.style.color = h1.style.color === "blue" ? "white" : "blue" });
+// h1.addEventListener("mouseenter", () => { h1.innerText = "Mouse here!"; });
+// h1.addEventListener("mouseleave", () => { h1.innerText = "Mouse leave."; });
 window.addEventListener("offline", () => alert("Network is SOS!"));
 window.addEventListener("online", () => alert("Gooooood!"));
 window.addEventListener("resize", () => { document.body.style.backgroundColor = "tomato"; });
 window.addEventListener("copy", () => alert("copier!"));
 
+h1.addEventListener("click", () => {
+  const clickedClass = "clicked";
+  // option-1
+  // if(h1.classList.contains(clickedClass)) { h1.classList.remove(clickedClass); }
+  // else { h1.classList.add(clickedClass); }
 
+  // option-2
+  h1.classList.toggle(clickedClass);
+});
+
+// const loginInput = document.querySelector("login-form input");
+// const loginButton = document.querySelector("login-form button");
+// loginButton.addEventListener("click", () => {
+//   const username = loginInput.value;
+//   console.log(username);
+//  });
+const loginForm = document.querySelector("#login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
+const greeting = document.querySelector("#greeting");
+
+const userKey = "username";
+const hiddenClassName = "hidden";
+
+const link = document.querySelector(".link a");
+link.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("link", e);
+});
+
+const printGreetings = () => {
+  const userName = localStorage.getItem(userKey);
+  loginForm.classList.add(hiddenClassName);
+  greeting.classList.remove(hiddenClassName);
+  greeting.innerText = `hello ${userName}`;
+};
+
+const submitHandle = (e) => {
+  e.preventDefault(); // refresh disabled.
+  const { value } = loginInput;
+  localStorage.setItem(userKey, value);
+  printGreetings();
+};
+
+const savedUserName = localStorage.getItem(userKey);
+if (savedUserName === null) {
+  loginForm.classList.remove(hiddenClassName);
+  loginForm.addEventListener("submit", submitHandle);
+} else {
+  printGreetings();
+}

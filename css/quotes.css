@@ -1,0 +1,30 @@
+#quote {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0px;
+  margin: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+#quote span {
+  display: block;
+  text-align: center;
+}
+
+#quote span:first-child {
+  color: yellow;
+  font-size: 25px;
+}
+
+#quote span:last-child {
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}

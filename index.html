@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Hi</title>
-  <link type="text/css" rel="stylesheet" href="index.css" />
+  <link type="text/css" rel="stylesheet" href="css/basic.css" />
 </head>
 
 <body id="body">
@@ -27,11 +27,40 @@
   </div>
   <h1 id="result">0</h1>
   <div class="hello">
-    <h1>Grab me!</h1>
-    <h1>Grab me!</h1>
-    <h1>Grab me!</h1>
+    <h1 class="sexy-font">Grab me!</h1>
   </div>
-  <script type="text/javascript" src="app.js"></script>
+  <div class="link">
+    <a href="https://nomadcoders.co" target="_blank">Go to courses</a>
+  </div>
+  <form id="login-form" class="hidden">
+    <input maxlength="15" type="text" placeholder="Waht is your name?" name="id" required />
+    <button type="submit">Log In</button>
+  </form>
+  <h1 id="greeting" class="hidden">Greeting</h1>
+  <div id="calendar">
+    <h2 id="date"></h2>
+    <h2 id="clock">00:00:00</h2>
+  </div>
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+  <form id="todo-form">
+    <input type="text" placeholder="Write todo .." />
+    <button type="submit">Add</button>
+  </form>
+  <ul id="todo-list"></ul>
+  <div id="geolocation"> 
+    <span></span>
+    <span></span>
+  </div>
+  <script type="text/javascript" src="js/basic.js"></script>
+  <script type="text/javascript" src="js/clock.js"></script>
+  <script type="text/javascript" src="js/greetings.js"></script>
+  <script type="text/javascript" src="js/quotes.js"></script>
+  <script type="text/javascript" src="js/background.js"></script>
+  <script type="text/javascript" src="js/todo.js"></script>
+  <script type="text/javascript" src="js/location.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+#calendar {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  margin: 5px 0px;
+}
+
+#clock {
+  color: tomato;
+  margin: 0px 10px;
+}
+
+#date {
+  color: tomato;
+  margin: 0px;
+}

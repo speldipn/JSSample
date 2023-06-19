@@ -1,3 +1,10 @@
+@import "clock.css";
+@import "greetings.css";
+@import "quotes.css";
+@import "background.css";
+@import "todo.css";
+@import "location.css";
+
 #body {
   background-color: cadetblue;
 }
@@ -25,4 +32,28 @@
   text-align: end;
   padding: 20px;
   font-size: 50px;
+}
+
+#login-form { }
+
+.clicked {
+  color: tomato;
+}
+
+.sexy-font {
+  font-family: "Monaco";
+}
+
+.link {
+  margin: 30px 0px;
+}
+
+.link a {
+  font-size: 30px;
+  text-decoration: none;
+  color: blue;
+}
+
+.hidden {
+  display: none;
 }
